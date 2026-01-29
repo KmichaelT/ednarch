@@ -1,0 +1,19 @@
+{
+  "name": "EdenArch",
+  "tagline": "Architecture that works.",
+  "email": "hello@edenarch.studio",
+  "phone": "+1 (555) 123-4567",
+  "address": "Addis Ababa, Ethiopia",
+  "social": {
+    "twitter": "#",
+    "instagram": "#",
+    "linkedin": "#"
+  },
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Work", "href": "/work" },
+    { "label": "Services", "href": "/services" },
+    { "label": "About", "href": "/about" }
+  ],
+  "copyright": "© 2024 EdenArch. All rights reserved."
+}
