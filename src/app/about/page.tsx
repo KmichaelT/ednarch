@@ -64,7 +64,7 @@ export default function AboutPage() {
         <div className="container-site">
           <div className="relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
-              src={placeholders.hero('Eden Eskinder')}
+              src="/images/eden/about.jpeg"
               alt="Eden Eskinder"
               fill
               className="object-cover"

@@ -44,10 +44,10 @@ const services = [
 
 // Projects data (static for client component)
 const projects = [
-  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Cafe+Thumb' },
-  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Residence+Thumb' },
-  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Tower+Thumb' },
-  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Wellness+Thumb' },
+  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=1' },
+  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=2' },
+  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=3' },
+  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=4' },
 ];
 
 // FAQ data
@@ -109,8 +109,8 @@ export default function HomePage() {
           {/* Hero Image */}
           <div className="mt-16 lg:mt-24 relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
-              src={placeholders.hero('Hero Image')}
-              alt="Architecture hero"
+              src="/images/eden/hero.jpeg"
+              alt="Eden Eskinder - Architect"
               fill
               className="object-cover"
               priority

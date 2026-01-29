@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -84,10 +85,15 @@ export function Footer() {
         </div>
       </div>
       
-      {/* Large Logo */}
+      {/* Large Logo - always white in dark footer */}
       <div className="container-site pb-12">
-        <div className="text-[15vw] lg:text-[12vw] font-light tracking-tighter text-white leading-none select-none">
-          EdenArch
+        <div className="relative h-24 lg:h-32 w-full max-w-md">
+          <Image
+            src="/logo-white.png"
+            alt="EdenArch"
+            fill
+            className="object-contain object-left"
+          />
         </div>
       </div>
     </footer>

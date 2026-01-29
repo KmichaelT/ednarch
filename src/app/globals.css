@@ -34,7 +34,7 @@
 }
 
 :root {
-  /* Light theme (primary) */
+  /* Light theme */
   --background: #ffffff;
   --foreground: #171717;
   --muted: #f5f5f5;
@@ -48,11 +48,37 @@
   --accent-foreground: #171717;
   --card: #ffffff;
   --card-foreground: #171717;
+  --input: #e5e5e5;
+  --ring: #171717;
   
   /* Footer/CTA dark sections */
   --dark-bg: #0a0a0a;
   --dark-fg: #ffffff;
   --dark-muted: #a3a3a3;
+}
+
+.dark {
+  /* Dark theme */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+  --primary: #fafafa;
+  --primary-foreground: #0a0a0a;
+  --secondary: #171717;
+  --secondary-foreground: #fafafa;
+  --accent: #171717;
+  --accent-foreground: #fafafa;
+  --card: #0a0a0a;
+  --card-foreground: #fafafa;
+  --input: #262626;
+  --ring: #fafafa;
+  
+  /* Footer section in dark mode - slightly lighter than bg */
+  --dark-bg: #000000;
+  --dark-fg: #ffffff;
+  --dark-muted: #737373;
 }
 
 @layer base {
@@ -67,6 +93,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   /* Typography defaults */
@@ -91,7 +118,7 @@
     @apply py-20 lg:py-32;
   }
   
-  /* Section label (FW 01) — ABOUT style */
+  /* Section label (01) — ABOUT style */
   .section-label {
     @apply text-xs tracking-widest uppercase text-muted-foreground;
   }
