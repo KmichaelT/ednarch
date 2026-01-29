@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAllProjects } from '@/lib/mdx';
-import { placeholders } from '@/lib/types';
 
 export const metadata = {
   title: 'Work | EdenArch',
@@ -46,7 +45,7 @@ export default function WorkPage() {
               <div className="flex items-center gap-4 flex-1">
                 <div className="relative w-12 h-12 bg-muted overflow-hidden shrink-0">
                   <Image
-                    src={project.thumbnail || placeholders.square(project.title)}
+                    src={project.thumbnail}
                     alt={project.title}
                     fill
                     className="object-cover"

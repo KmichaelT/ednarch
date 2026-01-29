@@ -3,10 +3,10 @@ slug: horizon-tower
 title: Horizon Tower
 category: Mixed-Use Architecture
 year: "2023"
-thumbnail: https://placehold.co/800x600/f5f5f5/a3a3a3?text=Horizon+Tower
+thumbnail: /images/projects/horizon-tower/hero.png
 order: 3
 hero:
-  image: https://placehold.co/1920x1080/e8e8e8/999999?text=Horizon+Tower+Hero
+  image: /images/projects/horizon-tower/hero.png
   title: Horizon Tower
   subtitle: Vertical density, resolved through variation
 meta:
@@ -17,13 +17,6 @@ meta:
 nextProject: genet-terrace-wellness-center
 ---
 
-{/* 
-  IMAGE PATHS: When adding real images, use these paths:
-  - thumbnail: /images/projects/horizon-tower/hero.jpg
-  - hero.image: /images/projects/horizon-tower/hero.jpg
-  - Images in content: /images/projects/horizon-tower/[filename].jpg
-*/}
-
 <TextBlock title="Overview">
 Horizon Tower addresses one of urban architecture's central challenges: how to stack radically different uses — retail, commercial, residential — into a single vertical structure while maintaining coherence, efficiency, and identity.
 
@@ -33,7 +26,7 @@ This isn't speculative design. The project navigates real constraints: zoning li
 </TextBlock>
 
 <Drawing
-  src="https://placehold.co/1400x900/fafafa/999999?text=Building+Section"
+  src="/images/projects/horizon-tower/section.png"
   label="Building Section"
   caption="Cross-section revealing three levels of basement parking, the commercial podium, and residential tower above."
 />
@@ -48,10 +41,9 @@ The podium — ground floor through approximately the fifth floor — houses ret
 The tower — floors six through fifteen — contains residential units. Floor plates are smaller and more efficient, with columns positioned to accommodate apartment layouts.
 </TextBlock>
 
-<Drawing
-  src="https://placehold.co/1400x900/fafafa/999999?text=Site+Plan"
-  label="Site Plan"
-  caption="Building footprint showing the tower's urban context and relationship to surrounding streets."
+<ImagePair
+  images={["/images/projects/horizon-tower/elevation-left.png", "/images/projects/horizon-tower/elevation-right.png"]}
+  captions={["Left elevation showing the stepped massing from podium to tower.", "Right elevation with the residential tower rising above the commercial base."]}
 />
 
 <TextBlock title="Floor Plate Strategy">
@@ -64,19 +56,21 @@ Commercial floors (levels 1-5) utilize larger floor plates with column-free span
 Residential floors (levels 6-15) step back slightly, creating terraces on some units while reducing the building's visual bulk. The floor plate is organized around a central corridor with units on either side.
 </TextBlock>
 
-<ImageGrid
-  images={[
-    "https://placehold.co/600x400/fafafa/999999?text=Ground+Floor",
-    "https://placehold.co/600x400/fafafa/999999?text=Commercial+Floor",
-    "https://placehold.co/600x400/fafafa/999999?text=Residential+Floor"
-  ]}
-  labels={[
-    "Ground Floor: Retail & Main Lobby",
-    "5th Floor: Commercial Typical",
-    "9th/14th Floor: Residential Typical"
-  ]}
-  caption="Floor plate variation responds to programmatic requirements — larger commercial floors below, efficient residential layouts above."
-  columns={3}
+<Drawing
+  src="/images/projects/horizon-tower/site-plan.png"
+  label="Site Plan"
+  caption="Building footprint showing the tower's urban context and relationship to surrounding streets."
+/>
+
+<Drawing
+  src="/images/projects/horizon-tower/ground-floor-plan.png"
+  label="Ground Floor Plan"
+  caption="Retail storefronts, main lobby, and vertical circulation core at street level."
+/>
+
+<ImageBlock
+  src="/images/projects/horizon-tower/elevation-rear.png"
+  caption="Rear elevation showing service access and the transition between podium and tower."
 />
 
 <TextBlock title="Facade Expression">

@@ -22,7 +22,7 @@ const navItems = [
 ];
 
 function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -35,11 +35,11 @@ function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       className="p-2 rounded-md hover:bg-muted transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? (
+      {resolvedTheme === 'dark' ? (
         <Sun className="h-5 w-5" />
       ) : (
         <Moon className="h-5 w-5" />
@@ -49,15 +49,17 @@ function ThemeToggle() {
 }
 
 function Logo() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Show light logo by default during SSR to prevent flash
-  const logoSrc = mounted && theme === 'dark' ? '/logo-white.png' : '/logo.png';
+  // Use resolvedTheme to handle system preference properly
+  // logo.png = color logo for light backgrounds
+  // logo-white.png = white logo for dark backgrounds
+  const logoSrc = mounted && resolvedTheme === 'dark' ? '/logo-white.png' : '/logo.png';
 
   return (
     <Link href="/" className="relative h-8 w-28 block">

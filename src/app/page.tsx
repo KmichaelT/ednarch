@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { placeholders } from '@/lib/types';
 import {
   Accordion,
   AccordionContent,
@@ -44,10 +43,10 @@ const services = [
 
 // Projects data (static for client component)
 const projects = [
-  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=1' },
-  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=2' },
-  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=3' },
-  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: 'https://placehold.co/100x100/f5f5f5/a3a3a3?text=4' },
+  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: '/images/projects/glass-box-cafe/hero.jpg' },
+  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: '/images/projects/westfield-residence/hero.jpg' },
+  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: '/images/projects/horizon-tower/hero.png' },
+  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: '/images/projects/genet-terrace/hero.png' },
 ];
 
 // FAQ data

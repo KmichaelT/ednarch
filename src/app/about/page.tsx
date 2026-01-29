@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { placeholders } from '@/lib/types';
 
 export const metadata = {
   title: 'About | EdenArch',

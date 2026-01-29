@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getProject, getProjectSlugs, getAdjacentProjects } from '@/lib/mdx';
 import { mdxComponents } from '@/components/mdx';
-import { placeholders } from '@/lib/types';
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -84,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="container-site">
           <div className="relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
-              src={project.hero.image || placeholders.hero(project.title)}
+              src={project.hero.image}
               alt={project.title}
               fill
               className="object-cover"
