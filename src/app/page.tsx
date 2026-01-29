@@ -1,7 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { getAllProjects } from '@/lib/mdx';
 import { placeholders } from '@/lib/types';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 // Stats data
 const stats = [
@@ -16,7 +23,7 @@ const services = [
   {
     number: '01',
     title: 'Architectural design',
-    description: 'Full design services from concept through construction documentation. We develop clear, coordinated drawings that contractors can build from — minimizing surprises and change orders.',
+    description: 'Full design services from concept through construction documentation. I develop clear, coordinated drawings that contractors can build from — minimizing surprises and change orders.',
   },
   {
     number: '02',
@@ -26,7 +33,7 @@ const services = [
   {
     number: '03',
     title: 'Urban and landscape design',
-    description: 'Site planning, landscape integration, and urban-scale studies. We consider the building\'s relationship to its context from day one — not as an afterthought.',
+    description: 'Site planning, landscape integration, and urban-scale studies. I consider the building\'s relationship to its context from day one — not as an afterthought.',
   },
   {
     number: '04',
@@ -35,9 +42,43 @@ const services = [
   },
 ];
 
-export default function HomePage() {
-  const projects = getAllProjects().slice(0, 6); // Show first 6 projects
+// Projects data (static for client component)
+const projects = [
+  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Cafe+Thumb' },
+  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Residence+Thumb' },
+  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Tower+Thumb' },
+  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: 'https://placehold.co/800x600/f5f5f5/a3a3a3?text=Wellness+Thumb' },
+];
 
+// FAQ data
+const faqs = [
+  {
+    question: 'What types of projects do you take on?',
+    answer: 'I work across a range of scales and typologies — from private residences and interiors to commercial buildings and mixed-use developments. Each project receives the same level of attention to detail and commitment to quality, regardless of size.',
+  },
+  {
+    question: 'How early should I involve you in my project?',
+    answer: 'The earlier, the better. Involving an architect from the start helps avoid costly mistakes and ensures the design aligns with your goals, budget, and site conditions from day one. Even if you\'re just exploring possibilities, a conversation can help clarify your options.',
+  },
+  {
+    question: 'Do you only work with large-scale clients?',
+    answer: 'Not at all. I work with individuals, families, and businesses of all sizes. Whether you\'re building your first home or developing a commercial property, I bring the same professional approach to every project.',
+  },
+  {
+    question: 'What does your process look like?',
+    answer: 'My process typically moves through four phases: initial consultation and concept development, design development with detailed drawings, construction documentation, and construction administration. I keep clients informed at every stage with clear communication and regular check-ins.',
+  },
+  {
+    question: 'Do you manage construction as well?',
+    answer: 'I offer construction administration services, which means I can oversee the construction process to ensure the built work matches the design intent. While I don\'t act as a general contractor, I work closely with builders to address questions and maintain quality.',
+  },
+  {
+    question: 'How do I get started?',
+    answer: 'Simply reach out through the contact form or send me an email. I\'ll schedule an initial consultation to discuss your project, understand your goals, and explain how I can help bring your vision to life.',
+  },
+];
+
+export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
@@ -47,7 +88,7 @@ export default function HomePage() {
             {/* Left - Headline */}
             <div>
               <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-balance leading-[1.1]">
-                We design spaces that balance function and timeless beauty.
+                I design spaces that balance function and timeless beauty.
               </h1>
               <Link href="/contact" className="link-arrow mt-8 inline-flex">
                 Get started
@@ -57,9 +98,9 @@ export default function HomePage() {
             {/* Right - Description */}
             <div className="max-w-md">
               <p className="text-muted-foreground leading-relaxed">
-                At Fieldwork, architecture is guided by precision and restraint. Our work blends modern 
+                My architecture is guided by precision and restraint. I blend modern 
                 aesthetics with human-centered design, creating spaces that endure. From residential 
-                and commercial projects to cultural landmarks, we focus on designing environments that 
+                and commercial projects to cultural landmarks, I focus on designing environments that 
                 integrate seamlessly with their context and stand the test of time.
               </p>
             </div>
@@ -83,7 +124,7 @@ export default function HomePage() {
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(FW 01) — ABOUT</span>
+            <span className="section-label">(01) — ABOUT</span>
           </div>
           
           <div className="two-col">
@@ -97,17 +138,17 @@ export default function HomePage() {
             {/* Right - Description */}
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                EdenArch is an architectural practice focused on delivering thoughtful, buildable design 
-                for clients who value clarity over complexity. We work across scales — from private 
+                EdenArch is my architectural practice focused on delivering thoughtful, buildable design 
+                for clients who value clarity over complexity. I work across scales — from private 
                 residences to mixed-use towers — bringing the same attention to spatial quality, 
                 material honesty, and client outcomes to every project.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Based in Addis Ababa, we collaborate with developers, entrepreneurs, and homeowners 
+                Based in Addis Ababa, I collaborate with developers, entrepreneurs, and homeowners 
                 who want architecture that works: on budget, on time, and exactly as imagined.
               </p>
               <Link href="/about" className="link-arrow">
-                About
+                About me
               </Link>
             </div>
           </div>
@@ -128,18 +169,18 @@ export default function HomePage() {
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(FW 02) — SERVICES</span>
+            <span className="section-label">(02) — SERVICES</span>
           </div>
           
           <div className="two-col mb-16">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                Discover the full range of services that shape lasting architecture.
+                Discover the full range of services I offer.
               </h2>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                From early concept through construction documentation, we ensure that every project 
+                From early concept through construction documentation, I ensure that every project 
                 feels cohesive, intentional, and built to last.
               </p>
             </div>
@@ -157,7 +198,7 @@ export default function HomePage() {
           </div>
           
           <Link href="/services" className="link-arrow mt-12 inline-flex">
-            View services
+            View all services
           </Link>
         </div>
       </section>
@@ -166,19 +207,19 @@ export default function HomePage() {
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(FW 03) — WORK</span>
+            <span className="section-label">(03) — WORK</span>
           </div>
           
           <div className="two-col mb-16">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                We showcase architecture built on precision and purpose.
+                Architecture built on precision and purpose.
               </h2>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                Our portfolio spans hospitality, residential, commercial, and wellness — each 
-                responding to its own brief, site, and story.
+                My portfolio spans hospitality, residential, commercial, and wellness — each 
+                project responding to its own brief, site, and story.
               </p>
             </div>
           </div>
@@ -200,7 +241,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-4 flex-1">
                   <div className="relative w-12 h-12 bg-muted overflow-hidden shrink-0">
                     <Image
-                      src={project.thumbnail || placeholders.square(project.title)}
+                      src={project.thumbnail}
                       alt={project.title}
                       fill
                       className="object-cover"
@@ -229,15 +270,15 @@ export default function HomePage() {
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(FW 04) — CLIENTS</span>
+            <span className="section-label">(04) — CLIENTS</span>
           </div>
           
           <div className="mb-16">
             <h2 className="font-serif text-3xl lg:text-4xl text-balance max-w-2xl">
-              We build trust through relationships as lasting as our spaces.
+              I build trust through relationships as lasting as my spaces.
             </h2>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-2xl">
-              Our clients range from developers to entrepreneurs and private homeowners. Each 
+              My clients range from developers to entrepreneurs and private homeowners. Each 
               partnership is grounded in clear communication, professional rigor, and a shared 
               belief in design that stands the test of time.
             </p>
@@ -247,9 +288,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             <blockquote className="border-t border-border pt-8">
               <p className="text-lg leading-relaxed mb-6">
-                &ldquo;EdenArch guided our project with remarkable clarity and vision. Their team 
+                &ldquo;Eden guided our project with remarkable clarity and vision. He 
                 understood not only the architecture but also the business goals behind it, making 
-                them an invaluable partner.&rdquo;
+                him an invaluable partner.&rdquo;
               </p>
               <footer>
                 <cite className="not-italic font-medium">Sarah Mitchell</cite>
@@ -259,7 +300,7 @@ export default function HomePage() {
             
             <blockquote className="border-t border-border pt-8">
               <p className="text-lg leading-relaxed mb-6">
-                &ldquo;Working with EdenArch was seamless from start to finish. Their approach is 
+                &ldquo;Working with Eden was seamless from start to finish. His approach is 
                 refined, precise, and deeply thoughtful — our institution now has a space that truly 
                 embodies its mission.&rdquo;
               </p>
@@ -276,42 +317,36 @@ export default function HomePage() {
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(FW 05) — FAQ</span>
+            <span className="section-label">(05) — FAQ</span>
           </div>
           
           <div className="two-col mb-16">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                We answer the questions that matter most.
+                Questions I get asked most often.
               </h2>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                Starting an architecture project is a big decision. These are the questions our 
-                clients ask most often.
+                Starting an architecture project is a big decision. Here are answers to the most 
+                common questions.
               </p>
             </div>
           </div>
           
-          {/* FAQ List */}
-          <div className="border-t border-border">
-            {[
-              'What types of projects does EdenArch take on?',
-              'How early should we involve EdenArch in our project?',
-              'Do you only work with large-scale clients?',
-              'What does your process look like?',
-              'Do you manage construction as well?',
-              'How do we get started with EdenArch?',
-            ].map((question, index) => (
-              <div 
-                key={index}
-                className="flex items-center justify-between py-5 border-b border-border cursor-pointer hover:bg-muted/50 transition-colors px-2 -mx-2"
-              >
-                <span>{question}</span>
-                <span className="text-muted-foreground">+</span>
-              </div>
+          {/* FAQ Accordion */}
+          <Accordion type="single" collapsible className="border-t border-border">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
+                <AccordionTrigger className="py-5 text-left hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
     </>

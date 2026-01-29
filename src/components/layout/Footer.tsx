@@ -44,7 +44,7 @@ export function Footer() {
                 hello@edenarch.studio
               </a>
               <p className="muted-text text-sm mt-6 mb-3">Phone</p>
-              <span className="text-white">+1 (555) 123-4567</span>
+              <span className="text-white">+251 91 234 5678</span>
             </div>
             
             {/* Navigation */}
@@ -65,7 +65,7 @@ export function Footer() {
             
             {/* Social */}
             <div>
-              <p className="muted-text text-sm mb-3">Social</p>
+              <p className="muted-text text-sm mb-3">Follow me</p>
               <nav className="flex flex-col gap-2">
                 {socialLinks.map((item) => (
                   <a

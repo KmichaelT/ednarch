@@ -5,7 +5,7 @@ import { placeholders } from '@/lib/types';
 
 export const metadata = {
   title: 'Work | EdenArch',
-  description: 'Our portfolio spans residential, commercial, and cultural projects designed with clarity and restraint.',
+  description: 'My portfolio spans residential, commercial, and cultural projects designed with clarity and restraint.',
 };
 
 export default function WorkPage() {
@@ -19,13 +19,13 @@ export default function WorkPage() {
           <div>
             <h1 className="font-serif text-4xl lg:text-5xl">Work</h1>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-              Our portfolio spans residential, commercial, and cultural projects designed with clarity 
-              and restraint. Each piece of work reflects our philosophy of creating spaces that balance 
+              My portfolio spans residential, commercial, and cultural projects designed with clarity 
+              and restraint. Each piece of work reflects my philosophy of creating spaces that balance 
               modern aesthetics with long-lasting functionality.
             </p>
           </div>
           <div className="flex justify-end items-start">
-            <span className="section-label">(FW 01) — WORK</span>
+            <span className="section-label">(01) — WORK</span>
           </div>
         </div>
 

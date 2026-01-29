@@ -4,44 +4,35 @@ import { placeholders } from '@/lib/types';
 
 export const metadata = {
   title: 'About | EdenArch',
-  description: 'Our practice is rooted in the belief that architecture should serve both people and place.',
+  description: 'Hello, I\'m Eden Eskinder, a skilled architect and urban planner with a passion for creating functional and aesthetically pleasing spaces.',
 };
 
-const services = [
+const timeline = [
   {
-    number: '01',
-    title: 'Architectural design',
-    description: 'Our architectural design practice shapes spaces that balance form, function, and context. Every project begins with a deep understanding of its site, its users, and its intended purpose. From private residences to cultural institutions and commercial developments, we craft concepts that respect their surroundings while standing out with clarity and purpose.',
-    cta: 'Inquire now →',
+    year: '2019',
+    title: 'Graduation',
+    description: 'Graduated with a BSc degree in Architecture and Urban Planning from Unity University, completing coursework in architectural design principles, urban planning concepts, and building systems.',
   },
   {
-    number: '02',
-    title: 'Interior architecture',
-    description: 'We believe the interior of a space should feel as intentional as its exterior. Material choices, spatial flow, and tailored details come together to produce interiors that are cohesive, refined, and practical. Whether designing workplaces, cultural venues, or private homes, we aim to deliver spaces that feel human-centered while remaining architecturally rigorous.',
-    cta: 'Inquire now →',
+    year: '2020-2023',
+    title: 'S.Hawi General Contractor',
+    description: 'Worked as an Architect and Urban Planner, designing G+30 commercial buildings, developing conceptual plans using AutoCAD, and supervising on-site construction to ensure alignment with designs.',
   },
   {
-    number: '03',
-    title: 'Urban and landscape design',
-    description: 'Cities and outdoor environments shape how people live and connect, and our urban and landscape design practice addresses these spaces with both care and ambition. We focus on master planning, parks, and public spaces that integrate seamlessly into their context, supporting community and long-term sustainability.',
-    cta: 'Inquire now →',
-  },
-  {
-    number: '04',
-    title: 'Project delivery and consultancy',
-    description: 'Successful architecture requires more than a great idea — it demands precise execution. Our project delivery and consultancy services guide clients from early planning through construction and beyond. With technical documentation, contractor coordination, and advisory support, we ensure every project is delivered to the highest standards.',
-    cta: 'Inquire now →',
+    year: '2023',
+    title: 'Founded EdenArch',
+    description: 'Launched EdenArch as a freelance architecture and design business, working with companies and individuals as an independent contractor specializing in residential, commercial, and interior design projects.',
   },
 ];
 
 const testimonials = [
   {
-    quote: 'EdenArch guided our project with remarkable clarity and vision. Their team understood not only the architecture but also the business goals behind it, making them an invaluable partner.',
+    quote: 'Eden guided our project with remarkable clarity and vision. He understood not only the architecture but also the business goals behind it, making him an invaluable partner.',
     author: 'Sarah Mitchell',
     role: 'Director, Horizon Development Group',
   },
   {
-    quote: 'Working with EdenArch was seamless from start to finish. Their approach is refined, precise, and deeply thoughtful — our institution now has a space that truly embodies its mission.',
+    quote: 'Working with Eden was seamless from start to finish. His approach is refined, precise, and deeply thoughtful — our institution now has a space that truly embodies its mission.',
     author: 'David Romero',
     role: 'Founder, Romero & Associates Cultural Projects',
   },
@@ -57,13 +48,12 @@ export default function AboutPage() {
             <div>
               <h1 className="font-serif text-4xl lg:text-5xl">About</h1>
               <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-                Our practice is rooted in the belief that architecture should serve both people and place. 
-                With every project, we bring together research, craft, and collaboration to design spaces 
-                that are precise, functional, and enduring.
+                Hello, I&apos;m Eden Eskinder, a skilled architect and urban planner with a passion 
+                for creating functional and aesthetically pleasing spaces.
               </p>
             </div>
             <div className="flex justify-end items-start">
-              <span className="section-label">(FW 01) — ABOUT</span>
+              <span className="section-label">(01) — ABOUT</span>
             </div>
           </div>
         </div>
@@ -74,8 +64,8 @@ export default function AboutPage() {
         <div className="container-site">
           <div className="relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
-              src={placeholders.hero('Studio Image')}
-              alt="EdenArch studio"
+              src={placeholders.hero('Eden Eskinder')}
+              alt="Eden Eskinder"
               fill
               className="object-cover"
               priority
@@ -85,31 +75,119 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* My Story - Intro */}
       <section className="pb-20 lg:pb-32">
         <div className="container-site">
-          {services.map((service, index) => (
-            <div 
-              key={service.number}
-              className={`two-col py-12 lg:py-16 ${index > 0 ? 'border-t border-border' : ''}`}
-            >
-              {/* Number + Title */}
-              <div className="flex gap-12">
-                <span className="text-sm text-muted-foreground">({service.number})</span>
-                <h2 className="text-xl font-medium">{service.title}</h2>
-              </div>
-              
-              {/* Description */}
+          <div className="flex justify-end mb-8">
+            <span className="section-label">(02) — MY STORY</span>
+          </div>
+          
+          <div className="two-col">
+            <div>
+              <h2 className="font-serif text-3xl lg:text-4xl text-balance">
+                Bringing visions to life through thoughtful design.
+              </h2>
+            </div>
+            <div>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                With years of experience in the field, I am proficient in designing floor plan 
+                drawings and 3D models, as well as producing photorealistic visualizations.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                I have a keen eye for color and texture, and I excel at selecting wall and textile 
+                colors and arranging layouts to optimize space and enhance the user experience. My 
+                expertise extends to furniture selection and placement, ensuring that each design 
+                is optimized for comfort, functionality, and style.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                With a strong focus on sustainability, I am committed to creating environmentally 
+                friendly and socially responsible designs. Let&apos;s work together to bring your 
+                vision to life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="pb-20 lg:pb-32">
+        <div className="container-site">
+          <div className="border-t border-border pt-12">
+            <h3 className="text-sm font-medium mb-12">Experience</h3>
+            
+            <div className="space-y-0">
+              {timeline.map((item, index) => (
+                <div 
+                  key={index}
+                  className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-b border-border"
+                >
+                  {/* Year */}
+                  <div className="md:col-span-2">
+                    <span className="text-sm text-muted-foreground font-medium">
+                      {item.year}
+                    </span>
+                  </div>
+                  
+                  {/* Title */}
+                  <div className="md:col-span-3">
+                    <h4 className="font-medium">{item.title}</h4>
+                  </div>
+                  
+                  {/* Description */}
+                  <div className="md:col-span-7">
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills/Expertise */}
+      <section className="pb-20 lg:pb-32">
+        <div className="container-site">
+          <div className="border-t border-border pt-12">
+            <div className="two-col">
               <div>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <Link href="/contact" className="link-arrow">
-                  {service.cta}
+                <h3 className="text-sm font-medium mb-8">What I Do</h3>
+              </div>
+              <div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                    Floor plan drawings and 3D modeling
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                    Photorealistic architectural visualizations
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                    Interior design and space planning
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                    Material and color selection
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                    Construction documentation
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                    On-site construction supervision
+                  </li>
+                </ul>
+                
+                <Link href="/services" className="link-arrow mt-8 inline-flex">
+                  View all services
                 </Link>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -117,15 +195,15 @@ export default function AboutPage() {
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(FW 02) — CLIENTS</span>
+            <span className="section-label">(03) — CLIENTS</span>
           </div>
           
           <div className="mb-16">
             <h2 className="font-serif text-3xl lg:text-4xl text-balance max-w-2xl">
-              We build trust through relationships as lasting as our spaces.
+              I build trust through relationships as lasting as my spaces.
             </h2>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-2xl">
-              Our clients range from developers to cultural institutions and private homeowners. 
+              My clients range from developers to cultural institutions and private homeowners. 
               Each partnership is grounded in clear communication, professional rigor, and a shared 
               belief in design that stands the test of time.
             </p>

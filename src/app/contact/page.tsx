@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Contact | EdenArch',
-  description: 'Have a project in mind? We\'d like to hear about it.',
+  description: 'Have a project in mind? I\'d love to hear about it.',
 };
 
 export default function ContactPage() {
@@ -12,11 +12,11 @@ export default function ContactPage() {
           <div>
             <h1 className="font-serif text-4xl lg:text-5xl">Get in Touch</h1>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-              Have a project in mind? We&apos;d like to hear about it.
+              Have a project in mind? I&apos;d love to hear about it.
             </p>
           </div>
           <div className="flex justify-end items-start">
-            <span className="section-label">(FW 01) — CONTACT</span>
+            <span className="section-label">(01) — CONTACT</span>
           </div>
         </div>
 
@@ -64,6 +64,7 @@ export default function ContactPage() {
                   <option value="commercial">Commercial</option>
                   <option value="hospitality">Hospitality</option>
                   <option value="mixed-use">Mixed-Use</option>
+                  <option value="interior">Interior Design</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -77,7 +78,7 @@ export default function ContactPage() {
                   name="message"
                   rows={6}
                   className="w-full px-4 py-3 border border-border bg-background focus:outline-none focus:border-foreground transition-colors resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell me about your project..."
                 />
               </div>
               
@@ -104,18 +105,18 @@ export default function ContactPage() {
             
             <div className="mb-12">
               <h3 className="text-sm font-medium mb-2">Phone</h3>
-              <span className="text-muted-foreground">+1 (555) 123-4567</span>
+              <span className="text-muted-foreground">+251 91 234 5678</span>
             </div>
             
             <div className="mb-12">
-              <h3 className="text-sm font-medium mb-2">Address</h3>
+              <h3 className="text-sm font-medium mb-2">Location</h3>
               <address className="text-muted-foreground not-italic">
                 Addis Ababa, Ethiopia
               </address>
             </div>
             
             <div>
-              <h3 className="text-sm font-medium mb-4">Follow us</h3>
+              <h3 className="text-sm font-medium mb-4">Follow me</h3>
               <div className="flex gap-6">
                 <a 
                   href="#" 

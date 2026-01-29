@@ -53,6 +53,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h1 className="font-serif text-3xl lg:text-4xl xl:text-5xl">
                 {project.title}
               </h1>
+              {/* Subtitle directly under title */}
+              <p className="text-muted-foreground leading-relaxed mt-4 max-w-md">
+                {project.hero.subtitle}
+              </p>
             </div>
             
             {/* Project Number */}
@@ -67,19 +71,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <div className="text-sm text-muted-foreground">{project.year}</div>
               </div>
               <div>
-                <div className="text-sm font-medium mb-1">Industry</div>
+                <div className="text-sm font-medium mb-1">Category</div>
                 <div className="text-sm text-muted-foreground">{project.category}</div>
               </div>
-            </div>
-          </div>
-          
-          {/* Overview */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-8">
-            <div className="lg:col-span-6">
-              <div className="text-sm font-medium mb-2">Overview</div>
-              <p className="text-muted-foreground leading-relaxed max-w-md">
-                {project.hero.subtitle}
-              </p>
             </div>
           </div>
         </div>

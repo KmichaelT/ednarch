@@ -11,7 +11,7 @@ export function ImageBlock({
   src, 
   alt = '', 
   caption, 
-  size = 'large' 
+  size = 'full'  // Changed default to full width
 }: ImageBlockProps) {
   const sizeClasses = {
     medium: 'max-w-3xl mx-auto',
@@ -27,7 +27,7 @@ export function ImageBlock({
           alt={alt || caption || ''}
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          sizes="100vw"
         />
       </div>
       {caption && (

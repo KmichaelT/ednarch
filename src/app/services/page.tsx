@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Services | EdenArch',
-  description: 'From early concept through construction documentation, we ensure that every project feels cohesive, intentional, and built to last.',
+  title: 'My Services | EdenArch',
+  description: 'From early concept through construction documentation, I ensure that every project feels cohesive, intentional, and built to last.',
 };
 
 const services = [
   {
     number: '01',
     title: 'Architectural design',
-    description: 'Full design services from concept through construction documentation. We develop clear, coordinated drawings that contractors can build from — minimizing surprises and change orders. Every project begins with a deep understanding of its site, its users, and its intended purpose.',
+    description: 'Full design services from concept through construction documentation. I develop clear, coordinated drawings that contractors can build from — minimizing surprises and change orders. Every project begins with a deep understanding of its site, its users, and its intended purpose.',
     features: [
       'Concept development and schematic design',
       'Design development and documentation',
@@ -20,7 +20,7 @@ const services = [
   {
     number: '02',
     title: 'Interior architecture',
-    description: 'Integrated interior design that extends the architectural concept into finishes, fixtures, and furniture layouts. We believe the interior of a space should feel as intentional as its exterior. Not decoration; spatial design.',
+    description: 'Integrated interior design that extends the architectural concept into finishes, fixtures, and furniture layouts. I believe the interior of a space should feel as intentional as its exterior. Not decoration; spatial design.',
     features: [
       'Space planning and layout',
       'Material and finish selection',
@@ -31,7 +31,7 @@ const services = [
   {
     number: '03',
     title: 'Urban and landscape design',
-    description: 'Site planning, landscape integration, and urban-scale studies. We consider the building\'s relationship to its context from day one — not as an afterthought. Our work supports community and long-term sustainability.',
+    description: 'Site planning, landscape integration, and urban-scale studies. I consider the building\'s relationship to its context from day one — not as an afterthought. My work supports community and long-term sustainability.',
     features: [
       'Master planning',
       'Site analysis and planning',
@@ -42,7 +42,7 @@ const services = [
   {
     number: '04',
     title: 'Project delivery and consultancy',
-    description: 'Design review, permit coordination, and construction oversight. For clients who have a design but need help getting it built. We ensure every project is delivered to the highest standards.',
+    description: 'Design review, permit coordination, and construction oversight. For clients who have a design but need help getting it built. I ensure every project is delivered to the highest standards.',
     features: [
       'Design review and advisory',
       'Permit and regulatory coordination',
@@ -59,14 +59,14 @@ export default function ServicesPage() {
         {/* Header */}
         <div className="two-col mb-16 lg:mb-24">
           <div>
-            <h1 className="font-serif text-4xl lg:text-5xl">Services</h1>
+            <h1 className="font-serif text-4xl lg:text-5xl">My Services</h1>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-              From early concept through construction documentation, we ensure that every project 
+              From early concept through construction documentation, I ensure that every project 
               feels cohesive, intentional, and built to last.
             </p>
           </div>
           <div className="flex justify-end items-start">
-            <span className="section-label">(FW 01) — SERVICES</span>
+            <span className="section-label">(01) — SERVICES</span>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <div 
             key={service.number}
-            className={`two-col py-12 lg:py-16 ${index > 0 ? 'border-t border-border' : 'border-t border-border'}`}
+            className={`two-col py-12 lg:py-16 ${index >= 0 ? 'border-t border-border' : ''}`}
           >
             {/* Number + Title */}
             <div>

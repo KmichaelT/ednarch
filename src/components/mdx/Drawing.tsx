@@ -8,7 +8,7 @@ interface DrawingProps {
 
 export function Drawing({ src, label, caption }: DrawingProps) {
   return (
-    <figure className="py-8 lg:py-12 max-w-4xl mx-auto">
+    <figure className="py-8 lg:py-12 w-full">
       {/* Label */}
       <div className="mb-4">
         <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
@@ -16,14 +16,14 @@ export function Drawing({ src, label, caption }: DrawingProps) {
         </span>
       </div>
       
-      {/* Drawing Image */}
+      {/* Drawing Image - Full width */}
       <div className="relative aspect-[16/10] bg-[#fafafa] overflow-hidden border border-border">
         <Image
           src={src}
           alt={label}
           fill
           className="object-contain p-4"
-          sizes="(max-width: 768px) 100vw, 900px"
+          sizes="100vw"
         />
       </div>
       
