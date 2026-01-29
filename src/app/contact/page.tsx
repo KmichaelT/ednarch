@@ -23,6 +23,7 @@ export default function ContactPage() {
         <div className="two-col">
           {/* Contact Form */}
           <div>
+            <h2 className="text-xl md:text-2xl font-serif mb-8">Send a Message</h2>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -93,49 +94,53 @@ export default function ContactPage() {
           
           {/* Contact Info */}
           <div className="lg:pl-12">
-            <div className="mb-12">
-              <h3 className="text-sm font-medium mb-2">Email</h3>
-              <a 
-                href="mailto:hello@edenarch.studio"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                hello@edenarch.studio
-              </a>
-            </div>
+            <h2 className="text-xl md:text-2xl font-serif mb-8">Contact Details</h2>
             
-            <div className="mb-12">
-              <h3 className="text-sm font-medium mb-2">Phone</h3>
-              <span className="text-muted-foreground">+251 91 234 5678</span>
-            </div>
-            
-            <div className="mb-12">
-              <h3 className="text-sm font-medium mb-2">Location</h3>
-              <address className="text-muted-foreground not-italic">
-                Addis Ababa, Ethiopia
-              </address>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-medium mb-4">Follow me</h3>
-              <div className="flex gap-6">
+            <div className="space-y-8">
+              <div>
+                <span className="block text-sm font-medium text-muted-foreground mb-1">Email</span>
                 <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  href="mailto:hello@edenarch.studio"
+                  className="text-foreground hover:opacity-70 transition-opacity"
                 >
-                  Twitter
+                  hello@edenarch.studio
                 </a>
-                <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Instagram
-                </a>
-                <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  LinkedIn
-                </a>
+              </div>
+              
+              <div>
+                <span className="block text-sm font-medium text-muted-foreground mb-1">Phone</span>
+                <span className="text-foreground">+251 91 234 5678</span>
+              </div>
+              
+              <div>
+                <span className="block text-sm font-medium text-muted-foreground mb-1">Location</span>
+                <address className="text-foreground not-italic">
+                  Addis Ababa, Ethiopia
+                </address>
+              </div>
+              
+              <div>
+                <span className="block text-sm font-medium text-muted-foreground mb-3">Follow me</span>
+                <div className="flex gap-6">
+                  <a 
+                    href="#" 
+                    className="text-foreground hover:opacity-70 transition-opacity"
+                  >
+                    Twitter
+                  </a>
+                  <a 
+                    href="#" 
+                    className="text-foreground hover:opacity-70 transition-opacity"
+                  >
+                    Instagram
+                  </a>
+                  <a 
+                    href="#" 
+                    className="text-foreground hover:opacity-70 transition-opacity"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           </div>

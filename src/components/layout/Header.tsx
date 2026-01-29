@@ -62,7 +62,7 @@ function Logo() {
   const logoSrc = mounted && resolvedTheme === 'dark' ? '/logo-white.png' : '/logo.png';
 
   return (
-    <Link href="/" className="relative h-8 w-28 block">
+    <Link href="/" className="relative h-10 w-36 block">
       <Image
         src={logoSrc}
         alt="EdenArch"

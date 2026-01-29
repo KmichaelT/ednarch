@@ -75,7 +75,7 @@
   --input: #262626;
   --ring: #fafafa;
   
-  /* Footer section in dark mode - slightly lighter than bg */
+  /* Footer section in dark mode */
   --dark-bg: #000000;
   --dark-fg: #ffffff;
   --dark-muted: #737373;
@@ -96,13 +96,53 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  /* Typography defaults */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-normal tracking-tight;
+  /* ===========================================
+     TYPOGRAPHY SCALE
+     Hierarchy: H1 > H2 > H3 > H4 > H5 > H6 > body
+     All headings MUST be larger than body text (16px)
+     =========================================== */
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight;
+    text-wrap: balance;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-serif font-normal tracking-tight;
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-serif font-normal tracking-tight;
+    line-height: 1.3;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-serif font-normal;
+    line-height: 1.3;
+  }
+  
+  h5 {
+    @apply text-lg font-sans font-medium;
+    line-height: 1.4;
+  }
+  
+  h6 {
+    @apply text-base font-sans font-medium;
+    line-height: 1.4;
   }
   
   p {
-    @apply leading-relaxed;
+    @apply text-base leading-relaxed;
+    /* Body text: 16px - smaller than ALL headings */
+  }
+  
+  /* Small/caption text */
+  small, .text-sm {
+    @apply text-sm;
+    /* 14px - smaller than body */
   }
 }
 
@@ -115,12 +155,12 @@
   
   /* Section spacing */
   .section {
-    @apply py-20 lg:py-32;
+    @apply py-16 lg:py-24;
   }
   
   /* Section label (01) — ABOUT style */
   .section-label {
-    @apply text-xs tracking-widest uppercase text-muted-foreground;
+    @apply text-xs tracking-widest uppercase text-muted-foreground font-sans;
   }
   
   /* Two-column layout */
@@ -157,13 +197,13 @@
     color: var(--dark-muted);
   }
   
-  /* Prose for MDX content */
+  /* Prose for MDX content - body text styling */
   .prose-custom {
-    @apply text-foreground leading-relaxed;
+    @apply text-base text-muted-foreground leading-relaxed;
   }
   
   .prose-custom p {
-    @apply mb-6;
+    @apply mb-6 last:mb-0;
   }
   
   .prose-custom ul {
@@ -173,12 +213,36 @@
   .prose-custom li {
     @apply pl-1;
   }
+  
+  /* Page title - used for main H1 on pages */
+  .page-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight;
+    text-wrap: balance;
+    line-height: 1.1;
+  }
+  
+  /* Section heading - H2 equivalent */
+  .section-heading {
+    @apply text-3xl md:text-4xl font-serif font-normal tracking-tight;
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+  
+  /* Subsection heading - H3 equivalent */
+  .subsection-heading {
+    @apply text-xl md:text-2xl font-serif font-normal tracking-tight;
+    line-height: 1.3;
+  }
 }
 
 @layer utilities {
   /* Text balance for headlines */
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
   }
   
   /* Fade in animation */

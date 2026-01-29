@@ -59,7 +59,7 @@ export default function AboutPage() {
       </section>
 
       {/* Hero Image */}
-      <section className="pb-20 lg:pb-32">
+      <section className="pb-16 lg:pb-24">
         <div className="container-site">
           <div className="relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* My Story - Intro */}
-      <section className="pb-20 lg:pb-32">
+      <section className="pb-16 lg:pb-24">
         <div className="container-site">
           <div className="flex justify-end mb-8">
             <span className="section-label">(02) — MY STORY</span>
@@ -109,10 +109,10 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="pb-20 lg:pb-32">
+      <section className="pb-16 lg:pb-24">
         <div className="container-site">
           <div className="border-t border-border pt-12">
-            <h3 className="text-sm font-medium mb-12">Experience</h3>
+            <h2 className="text-xl md:text-2xl font-serif mb-12">Experience</h2>
             
             <div className="space-y-0">
               {timeline.map((item, index) => (
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   
                   {/* Title */}
                   <div className="md:col-span-3">
-                    <h4 className="font-medium">{item.title}</h4>
+                    <h3 className="text-lg font-medium">{item.title}</h3>
                   </div>
                   
                   {/* Description */}
@@ -146,12 +146,12 @@ export default function AboutPage() {
       </section>
 
       {/* Skills/Expertise */}
-      <section className="pb-20 lg:pb-32">
+      <section className="pb-16 lg:pb-24">
         <div className="container-site">
           <div className="border-t border-border pt-12">
             <div className="two-col">
               <div>
-                <h3 className="text-sm font-medium mb-8">What I Do</h3>
+                <h2 className="text-xl md:text-2xl font-serif mb-8">What I Do</h2>
               </div>
               <div>
                 <ul className="space-y-4">
