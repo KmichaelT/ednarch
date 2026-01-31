@@ -62,7 +62,7 @@ function Logo() {
   const logoSrc = mounted && resolvedTheme === 'dark' ? '/logo-white.png' : '/logo.png';
 
   return (
-    <Link href="/" className="relative h-10 w-36 block">
+    <Link href="/" className="relative h-10 w-44 block">
       <Image
         src={logoSrc}
         alt="EdenArch"
@@ -80,7 +80,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border/40">
       <div className="container-site">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Logo />
           

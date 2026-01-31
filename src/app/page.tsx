@@ -45,8 +45,8 @@ const services = [
 const projects = [
   { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: '/images/projects/glass-box-cafe/hero.jpg' },
   { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: '/images/projects/westfield-residence/hero.jpg' },
-  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: '/images/projects/horizon-tower/hero.png' },
-  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: '/images/projects/genet-terrace/hero.png' },
+  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: '/images/projects/horizon-tower/hero.jpeg' },
+  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: '/images/projects/genet-terrace/hero.jpeg' },
 ];
 
 // FAQ data
