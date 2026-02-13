@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     description: 'Design services for clients who value clarity, precision, and buildings that deliver on their promise.',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

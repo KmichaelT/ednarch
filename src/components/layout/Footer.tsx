@@ -9,12 +9,6 @@ const navItems = [
   { label: 'Contact', href: '/contact' },
 ];
 
-const socialLinks = [
-  { label: 'Twitter', href: '#' },
-  { label: 'Instagram', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-];
-
 export function Footer() {
   return (
     <footer className="dark-section">
@@ -39,13 +33,18 @@ export function Footer() {
             <div>
               <p className="muted-text text-sm mb-3">Email</p>
               <a 
-                href="mailto:hello@edenarch.studio" 
+                href="mailto:edenetilahun@gmail.com" 
                 className="text-white hover:opacity-70 transition-opacity"
               >
-                hello@edenarch.studio
+                edenetilahun@gmail.com
               </a>
               <p className="muted-text text-sm mt-6 mb-3">Phone</p>
-              <span className="text-white">+251 91 234 5678</span>
+              <a
+                href="tel:+12404814420"
+                className="text-white hover:opacity-70 transition-opacity"
+              >
+                +1 240 481 4420
+              </a>
             </div>
             
             {/* Navigation */}
@@ -64,22 +63,10 @@ export function Footer() {
               </nav>
             </div>
             
-            {/* Social */}
+            {/* Location */}
             <div>
-              <p className="muted-text text-sm mb-3">Follow me</p>
-              <nav className="flex flex-col gap-2">
-                {socialLinks.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="text-white hover:opacity-70 transition-opacity w-fit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
+              <p className="muted-text text-sm mb-3">Location</p>
+              <p className="text-white">Silver Spring, MD</p>
             </div>
           </div>
         </div>
