@@ -18,12 +18,10 @@ export function Footer() {
           Let&apos;s start designing a space that matches your vision.
         </h2>
         <Link
-          href="https://www.upwork.com/freelancers/~01fe06473308f6bc5c"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/contact"
           className="link-arrow text-white"
         >
-          Hire me on Upwork
+          Start your project
         </Link>
       </div>
       
