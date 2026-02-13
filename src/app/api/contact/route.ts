@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
 interface ContactPayload {
   name?: string;
@@ -8,9 +7,8 @@ interface ContactPayload {
   message?: string;
 }
 
+const RESEND_API_ENDPOINT = 'https://api.resend.com/emails';
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-
-const resendClient = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null;
 
 function buildEmailBody({ name, email, projectType, message }: Required<ContactPayload>) {
   const projectLine = projectType ? `<p><strong>Project Type:</strong> ${projectType}</p>` : '';
@@ -46,7 +44,7 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!resendClient) {
+    if (!RESEND_API_KEY) {
       console.error('Missing RESEND_API_KEY environment variable.');
       return NextResponse.json(
         { ok: false, error: 'Email service is not configured.' },
@@ -64,18 +62,26 @@ export async function POST(request: Request) {
       message,
     });
 
-    const response = await resendClient.emails.send({
-      from: fromEmail,
-      to: [toEmail],
-      reply_to: email,
-      subject: `New inquiry from ${name}`,
-      text,
-      html,
+    const sendResponse = await fetch(RESEND_API_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: fromEmail,
+        to: [toEmail],
+        reply_to: email,
+        subject: `New inquiry from ${name}`,
+        text,
+        html,
+      }),
     });
 
-    if (response.error) {
-      console.error('Resend API error:', response.error);
-      throw new Error(response.error.message);
+    if (!sendResponse.ok) {
+      const errorBody = await sendResponse.text();
+      console.error('Resend API error:', errorBody);
+      throw new Error('Failed to send email via Resend.');
     }
 
     return NextResponse.json({ ok: true });
