@@ -9,7 +9,18 @@ const navItems = [
   { label: 'Contact', href: '/contact' },
 ];
 
-export function Footer() {
+type FooterProps = {
+  subdomain?: string | null;
+};
+
+export function Footer({ subdomain = null }: FooterProps) {
+  const isUpworkDomain = subdomain === 'upwork';
+  const ctaHref = isUpworkDomain
+    ? 'https://www.upwork.com/freelancers/~01fe06473308f6bc5c'
+    : '/contact';
+  const ctaTarget = isUpworkDomain ? '_blank' : undefined;
+  const ctaRel = isUpworkDomain ? 'noopener noreferrer' : undefined;
+
   return (
     <footer className="dark-section">
       {/* CTA Section */}
@@ -18,7 +29,9 @@ export function Footer() {
           Let&apos;s start designing a space that matches your vision.
         </h2>
         <Link
-          href="/contact"
+          href={ctaHref}
+          target={ctaTarget}
+          rel={ctaRel}
           className="link-arrow text-white"
         >
           Start your project

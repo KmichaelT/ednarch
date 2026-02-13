@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Header, Footer } from '@/components/layout';
 import './globals.css';
+import { getSubdomain } from '@/lib/subdomain';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -31,11 +32,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const subdomain = await getSubdomain();
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body className="font-sans">
@@ -45,11 +47,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <Header />
+          <Header subdomain={subdomain} />
           <main className="min-h-screen">
             {children}
           </main>
-          <Footer />
+          <Footer subdomain={subdomain} />
         </ThemeProvider>
       </body>
     </html>

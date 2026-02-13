@@ -74,8 +74,19 @@ function Logo() {
   );
 }
 
-export function Header() {
+type HeaderProps = {
+  subdomain?: string | null;
+};
+
+export function Header({ subdomain = null }: HeaderProps) {
   const pathname = usePathname();
+  const isUpworkDomain = subdomain === 'upwork';
+  const primaryCtaHref = isUpworkDomain
+    ? 'https://www.upwork.com/freelancers/~01fe06473308f6bc5c'
+    : '/contact';
+  const primaryCtaLabel = isUpworkDomain ? 'Hire me on Upwork' : 'Contact';
+  const primaryCtaTarget = isUpworkDomain ? '_blank' : undefined;
+  const primaryCtaRel = isUpworkDomain ? 'noopener noreferrer' : undefined;
   
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border/40">
@@ -107,14 +118,13 @@ export function Header() {
             {/* Theme Toggle */}
             <ThemeToggle />
             
-            {/* Upwork CTA - Desktop only */}
             <Link
-              href="https://www.upwork.com/freelancers/~01fe06473308f6bc5c"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={primaryCtaHref}
+              target={primaryCtaTarget}
+              rel={primaryCtaRel}
               className="hidden lg:block text-sm font-medium px-4 py-2 bg-foreground text-background rounded-sm hover:opacity-90 transition-opacity"
             >
-              Hire me on Upwork
+              {primaryCtaLabel}
             </Link>
             
             {/* Mobile Menu */}
@@ -146,12 +156,21 @@ export function Header() {
                     ))}
                     <SheetClose asChild>
                       <Link
-                        href="https://www.upwork.com/freelancers/~01fe06473308f6bc5c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg py-3 px-2 rounded-md transition-colors hover:bg-muted text-foreground font-medium"
+                        href={primaryCtaHref}
+                        target={primaryCtaTarget}
+                        rel={primaryCtaRel}
+                        className={
+                          isUpworkDomain
+                            ? 'text-lg py-3 px-2 rounded-md transition-colors hover:bg-muted text-foreground font-medium'
+                            : cn(
+                                'text-lg py-3 px-2 rounded-md transition-colors hover:bg-muted',
+                                pathname === '/contact'
+                                  ? 'text-foreground font-medium bg-muted'
+                                  : 'text-muted-foreground',
+                              )
+                        }
                       >
-                        Hire me on Upwork
+                        {primaryCtaLabel}
                       </Link>
                     </SheetClose>
                   </nav>
