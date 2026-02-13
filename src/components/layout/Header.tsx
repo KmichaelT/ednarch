@@ -107,12 +107,14 @@ export function Header() {
             {/* Theme Toggle */}
             <ThemeToggle />
             
-            {/* Contact - Desktop only */}
+            {/* Upwork CTA - Desktop only */}
             <Link
-              href="/contact"
+              href="https://www.upwork.com/freelancers/~01fe06473308f6bc5c"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden lg:block text-sm font-medium px-4 py-2 bg-foreground text-background rounded-sm hover:opacity-90 transition-opacity"
             >
-              Contact
+              Hire me on Upwork
             </Link>
             
             {/* Mobile Menu */}
@@ -144,15 +146,12 @@ export function Header() {
                     ))}
                     <SheetClose asChild>
                       <Link
-                        href="/contact"
-                        className={cn(
-                          'text-lg py-3 px-2 rounded-md transition-colors hover:bg-muted',
-                          pathname === '/contact'
-                            ? 'text-foreground font-medium bg-muted'
-                            : 'text-muted-foreground'
-                        )}
+                        href="https://www.upwork.com/freelancers/~01fe06473308f6bc5c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg py-3 px-2 rounded-md transition-colors hover:bg-muted text-foreground font-medium"
                       >
-                        Contact
+                        Hire me on Upwork
                       </Link>
                     </SheetClose>
                   </nav>
