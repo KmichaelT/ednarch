@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <a href="/eden-tilahun-resume.pdf" className="link-arrow inline-flex" target="_blank" rel="noopener noreferrer">
                   View résumé (PDF)
                 </a>
-                <a href="https://www.linkedin.com/in/edenarch" className="link-arrow inline-flex" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/edentilahun" className="link-arrow inline-flex" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </div>

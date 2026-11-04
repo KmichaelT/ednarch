@@ -60,12 +60,12 @@ export function Footer({ subdomain = null }: FooterProps) {
               </a>
               <p className="muted-text text-sm mt-6 mb-3">LinkedIn</p>
               <a
-                href="https://www.linkedin.com/in/edenarch"
+                href="https://www.linkedin.com/in/edentilahun"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:opacity-70 transition-opacity"
               >
-                linkedin.com/in/edenarch
+                linkedin.com/in/edentilahun
               </a>
             </div>
             
