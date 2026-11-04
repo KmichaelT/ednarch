@@ -2,52 +2,52 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'My Services | EdenArch',
-  description: 'From early concept through construction documentation, I ensure that every project feels cohesive, intentional, and built to last.',
+  description: 'Drafting, permit drawings, Revit modeling, and architectural design in AutoCAD, Revit, and MicroStation.',
 };
 
 const services = [
   {
     number: '01',
-    title: 'Architectural design',
-    description: 'Full design services from concept through construction documentation. I develop clear, coordinated drawings that contractors can build from — minimizing surprises and change orders. Every project begins with a deep understanding of its site, its users, and its intended purpose.',
+    title: 'Drafting and construction documents',
+    description: 'Coordinated drawing sets in AutoCAD and Revit that reviewers can approve and contractors can build from. Every sheet is checked for clear dimensions, consistent notes, and drawings that agree with each other.',
     features: [
-      'Concept development and schematic design',
-      'Design development and documentation',
-      'Construction drawings and specifications',
-      'Permit coordination',
+      'Floor plans, elevations, and sections',
+      'Site plans and details',
+      'Permit-ready drawing sets',
+      'Drawing revisions and updates',
     ],
   },
   {
     number: '02',
-    title: 'Interior architecture',
-    description: 'Integrated interior design that extends the architectural concept into finishes, fixtures, and furniture layouts. I believe the interior of a space should feel as intentional as its exterior. Not decoration; spatial design.',
+    title: 'Permit and civil drafting',
+    description: 'Traffic control plans in AutoCAD and MicroStation, and permit packages for DC agencies, assembled, submitted, and tracked through review so projects keep moving.',
     features: [
-      'Space planning and layout',
-      'Material and finish selection',
-      'Custom millwork and furniture design',
-      'Lighting design integration',
+      'Traffic control plans (TCPs)',
+      'Permit packages for DDOT, DOB, and DOEE',
+      'Agency submittal tracking',
+      'Zoning and land-use compliance research',
     ],
   },
   {
     number: '03',
-    title: 'Urban and landscape design',
-    description: 'Site planning, landscape integration, and urban-scale studies. I consider the building\'s relationship to its context from day one — not as an afterthought. My work supports community and long-term sustainability.',
+    title: 'Revit modeling and visualization',
+    description: 'Revit models that keep plans, sections, and elevations in sync, plus 3D views and renderings that help teams and clients see the design before it is built.',
     features: [
-      'Master planning',
-      'Site analysis and planning',
-      'Landscape architecture coordination',
-      'Public space design',
+      'Revit building models',
+      'Coordinated plans, sections, and elevations from one model',
+      '3D views and renderings',
+      'SketchUp massing studies',
     ],
   },
   {
     number: '04',
-    title: 'Project delivery and consultancy',
-    description: 'Design review, permit coordination, and construction oversight. For clients who have a design but need help getting it built. I ensure every project is delivered to the highest standards.',
+    title: 'Architectural and interior design',
+    description: 'Concept through design development for residential, hospitality, and mixed-use projects, with interiors planned as carefully as the building around them.',
     features: [
-      'Design review and advisory',
-      'Permit and regulatory coordination',
-      'Contractor coordination',
-      'Construction administration',
+      'Concept and schematic design',
+      'Design development',
+      'Space planning and interior layouts',
+      'Material and finish selection',
     ],
   },
 ];
@@ -61,8 +61,8 @@ export default function ServicesPage() {
           <div>
             <h1 className="font-serif text-4xl lg:text-5xl">My Services</h1>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-              From early concept through construction documentation, I ensure that every project 
-              feels cohesive, intentional, and built to last.
+              Clear, coordinated drawings in AutoCAD, Revit, and MicroStation, supported by a
+              degree and hands-on experience in architectural design.
             </p>
           </div>
           <div className="flex justify-end items-start">

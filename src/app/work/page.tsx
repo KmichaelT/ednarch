@@ -4,7 +4,7 @@ import { getAllProjects } from '@/lib/mdx';
 
 export const metadata = {
   title: 'Work | EdenArch',
-  description: 'My portfolio spans residential, commercial, and cultural projects designed with clarity and restraint.',
+  description: 'Residential, hospitality, mixed-use, and wellness projects, shown through the floor plans, elevations, and models behind them.',
 };
 
 export default function WorkPage() {
@@ -18,9 +18,8 @@ export default function WorkPage() {
           <div>
             <h1 className="font-serif text-4xl lg:text-5xl">Work</h1>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-              My portfolio spans residential, commercial, and cultural projects designed with clarity 
-              and restraint. Each piece of work reflects my philosophy of creating spaces that balance 
-              modern aesthetics with long-lasting functionality.
+              Residential, hospitality, mixed-use, and wellness projects, each shown through the
+              floor plans, elevations, sections, and models I drew for it.
             </p>
           </div>
           <div className="flex justify-end items-start">

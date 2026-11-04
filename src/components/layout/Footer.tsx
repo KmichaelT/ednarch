@@ -26,7 +26,7 @@ export function Footer({ subdomain = null }: FooterProps) {
       {/* CTA Section */}
       <div className="container-site py-20 lg:py-28">
         <h2 className="font-serif text-3xl lg:text-4xl text-balance max-w-lg mb-6">
-          Let&apos;s start designing a space that matches your vision.
+          Need clear, buildable drawings? Let&apos;s talk.
         </h2>
         <Link
           href={ctaHref}
@@ -34,7 +34,7 @@ export function Footer({ subdomain = null }: FooterProps) {
           rel={ctaRel}
           className="link-arrow text-white"
         >
-          Start your project
+          {isUpworkDomain ? 'Start your project' : 'Get in touch'}
         </Link>
       </div>
       
@@ -58,6 +58,15 @@ export function Footer({ subdomain = null }: FooterProps) {
               >
                 +1 240 481 4420
               </a>
+              <p className="muted-text text-sm mt-6 mb-3">LinkedIn</p>
+              <a
+                href="https://www.linkedin.com/in/edenarch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:opacity-70 transition-opacity"
+              >
+                linkedin.com/in/edenarch
+              </a>
             </div>
             
             {/* Navigation */}
@@ -80,6 +89,16 @@ export function Footer({ subdomain = null }: FooterProps) {
             <div>
               <p className="muted-text text-sm mb-3">Location</p>
               <p className="text-white">Silver Spring, MD</p>
+              <p className="muted-text text-sm mt-1">Washington, DC area</p>
+              <p className="muted-text text-sm mt-6 mb-3">Résumé</p>
+              <a
+                href="/eden-tilahun-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:opacity-70 transition-opacity"
+              >
+                Download PDF
+              </a>
             </div>
           </div>
         </div>
