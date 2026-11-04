@@ -15,6 +15,8 @@ export interface ProjectHero {
 }
 
 export interface ProjectMetaDetails {
+  drawings?: string;
+  scale?: string;
   location?: string;
   program?: string;
   area?: string;

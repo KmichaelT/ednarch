@@ -11,9 +11,9 @@ import {
 
 // Stats data
 const stats = [
-  { value: '6+', label: 'Years in architecture and construction' },
+  { value: '5+', label: 'Years in architecture and construction' },
   { value: '3', label: 'CAD & BIM platforms' },
-  { value: '5', label: 'Portfolio projects' },
+  { value: '1:100', label: 'Construction drawing sets' },
   { value: '2019', label: 'B.S. in Architecture' },
 ];
 
@@ -43,11 +43,9 @@ const services = [
 
 // Projects data (static for client component)
 const projects = [
-  { slug: 'eight-a-apartments', title: 'Eight-A Apartments', category: 'Residential Architecture', year: '2025', thumbnail: '/images/projects/eight-a-apartments/hero.jpg' },
-  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: '/images/projects/glass-box-cafe/hero.jpg' },
-  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: '/images/projects/westfield-residence/hero.jpg' },
-  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: '/images/projects/horizon-tower/hero.jpeg' },
-  { slug: 'genet-terrace-wellness-center', title: 'Genet Terrace Wellness Center', category: 'Wellness Architecture', year: '2023', thumbnail: '/images/projects/genet-terrace/hero.jpeg' },
+  { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Plans, section, elevations, site plan', year: '2023', thumbnail: '/images/projects/horizon-tower/hero.jpeg' },
+  { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Floor plans, renderings', year: '2024', thumbnail: '/images/projects/westfield-residence/hero.jpg' },
+  { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Dimensioned floor plans, renderings', year: '2024', thumbnail: '/images/projects/glass-box-cafe/hero.jpg' },
 ];
 
 // FAQ data
@@ -66,7 +64,7 @@ const faqs = [
   },
   {
     question: 'Are you open to full-time roles or freelance work?',
-    answer: 'Both. I am open to drafter, CAD technician, and Revit/BIM roles in the Washington, DC area or remote, and I take on freelance drafting and design projects through EdenArch.',
+    answer: 'Both. I am open to drafter, CAD technician, and Revit/BIM roles in the Washington, DC area or remote, and I take on freelance drafting projects.',
   },
   {
     question: 'How do I get started?',
@@ -139,14 +137,13 @@ export default function HomePage() {
             {/* Right - Description */}
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I bring a B.S. in Architecture and 6+ years at an engineering firm, a general
-                contractor, and my own practice to every drawing set, from a five-bedroom house
-                and an 80-seat cafe to a 15-story mixed-use tower.
+                I bring a B.S. in Architecture and 5+ years at a general contractor and an
+                engineering firm to every drawing set, from a five-bedroom house and an 80-seat
+                cafe to a 15-story mixed-use tower.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Today I draft traffic control plans and prepare permit submittals for DC agencies
-                at a DC-area engineering firm, and take on freelance drafting and design work
-                through EdenArch, my studio.
+                at a DC-area engineering firm.
               </p>
               <Link href="/about" className="link-arrow">
                 About me
@@ -219,8 +216,8 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                Residential, hospitality, mixed-use, and wellness projects, each shown through
-                the floor plans, elevations, and models behind it.
+                Three drawing sets: a 15-story mixed-use tower at 1:100, a three-story house,
+                and a two-level cafe.
               </p>
             </div>
           </div>

@@ -38,8 +38,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   
   const { next } = getAdjacentProjects(slug);
   
-  // Get meta entries as array
-  const metaEntries = Object.entries(project.meta).filter(([, value]) => value);
+  // Get meta entries as array (drawings is shown in the header instead)
+  const { drawings, ...otherMeta } = project.meta;
+  const metaEntries = Object.entries(otherMeta).filter(([, value]) => value);
 
   return (
     <>
@@ -73,6 +74,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <div className="text-sm font-medium mb-1">Category</div>
                 <div className="text-sm text-muted-foreground">{project.category}</div>
               </div>
+              {drawings && (
+                <div className="col-span-2">
+                  <div className="text-sm font-medium mb-1">Drawings</div>
+                  <div className="text-sm text-muted-foreground">{drawings}</div>
+                </div>
+              )}
             </div>
           </div>
         </div>
