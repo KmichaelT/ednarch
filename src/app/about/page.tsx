@@ -3,38 +3,55 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About | EdenArch',
-  description: 'Hello, I\'m Eden Eskinder, a skilled architect and urban planner with a passion for creating functional and aesthetically pleasing spaces.',
+  description: 'I\'m Eden Tilahun, an architectural and civil CAD drafter and architectural designer based in Silver Spring, MD.',
 };
 
 const timeline = [
   {
-    year: '2019',
-    title: 'Graduation',
-    description: 'Graduated with a BSc degree in Architecture and Urban Planning from Unity University, completing coursework in architectural design principles, urban planning concepts, and building systems.',
+    year: '2025 – Present',
+    title: 'Capital Engineering LLC',
+    role: 'Permit Coordinator',
+    description: 'Draft traffic control plans in AutoCAD and MicroStation, and prepare and track permit submittals for DC agencies, including DDOT, DOB, and DOEE.',
   },
   {
-    year: '2020-2023',
+    year: '2023 – Present',
+    title: 'EdenArch',
+    role: 'Freelance Architectural Drafter & Designer',
+    description: 'Revit models, CAD drawings, and renderings for residential, hospitality, and mixed-use projects, including an 8-unit, 5-story apartment building delivered in three weeks.',
+  },
+  {
+    year: '2020 – 2023',
     title: 'S.Hawi General Contractor',
-    description: 'Worked as an Architect and Urban Planner, designing G+30 commercial buildings, developing conceptual plans using AutoCAD, and supervising on-site construction to ensure alignment with designs.',
+    role: 'Architectural Designer & Urban Planner',
+    description: 'Developed AutoCAD conceptual plans for a 30-story commercial complex, led its permitting and zoning compliance, and supervised construction on site. Received the company\'s Certificate of Recognition in 2021.',
   },
   {
-    year: '2023',
-    title: 'Founded EdenArch',
-    description: 'Launched EdenArch as a freelance architecture and design business, working with companies and individuals as an independent contractor specializing in residential, commercial, and interior design projects.',
+    year: '2019 – 2020',
+    title: 'Denk Furniture Co.',
+    role: 'Architectural Designer',
+    description: 'Worked with manufacturing teams to keep product designs within safety and regulatory standards.',
+  },
+  {
+    year: '2019',
+    title: 'Unity University',
+    role: 'B.S. in Architecture and Urban Planning',
+    description: 'Coursework in architectural design, urban planning, and building systems.',
+  },
+  {
+    year: '2018',
+    title: 'Nemad Consulting Architects & Engineers',
+    role: 'Architecture Intern',
+    description: 'Prepared bills of quantities and reinforced concrete schedules, and supported as-built drawings for a rehabilitation center\'s permit documents.',
   },
 ];
 
-const testimonials = [
-  {
-    quote: 'Eden guided our project with remarkable clarity and vision. He understood not only the architecture but also the business goals behind it, making him an invaluable partner.',
-    author: 'Sarah Mitchell',
-    role: 'Director, Horizon Development Group',
-  },
-  {
-    quote: 'Working with Eden was seamless from start to finish. His approach is refined, precise, and deeply thoughtful — our institution now has a space that truly embodies its mission.',
-    author: 'David Romero',
-    role: 'Founder, Romero & Associates Cultural Projects',
-  },
+const skills = [
+  'Construction documents and permit sets',
+  'Floor plans, elevations, sections, and site plans',
+  'Revit modeling and 3D visualization',
+  'Traffic control plans (AutoCAD and MicroStation)',
+  'Permit submittals for DC agencies (DDOT, DOB, DOEE)',
+  'On-site construction supervision',
 ];
 
 export default function AboutPage() {
@@ -47,8 +64,8 @@ export default function AboutPage() {
             <div>
               <h1 className="font-serif text-4xl lg:text-5xl">About</h1>
               <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-                Hello, I&apos;m Eden Eskinder, a skilled architect and urban planner with a passion 
-                for creating functional and aesthetically pleasing spaces.
+                Hello, I&apos;m Eden Tilahun, an architectural and civil CAD drafter and
+                architectural designer based in Silver Spring, MD.
               </p>
             </div>
             <div className="flex justify-end items-start">
@@ -64,7 +81,7 @@ export default function AboutPage() {
           <div className="relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
               src="/images/eden/about.jpeg"
-              alt="Eden Eskinder"
+              alt="Eden Tilahun"
               fill
               className="object-cover"
               priority
@@ -80,29 +97,40 @@ export default function AboutPage() {
           <div className="flex justify-end mb-8">
             <span className="section-label">(02) — MY STORY</span>
           </div>
-          
+
           <div className="two-col">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                Bringing visions to life through thoughtful design.
+                Turning design intent into drawings that get built.
               </h2>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With years of experience in the field, I am proficient in designing floor plan 
-                drawings and 3D models, as well as producing photorealistic visualizations.
+                I studied architecture and urban planning at Unity University, then spent more
+                than three years at S.Hawi General Contractor drawing conceptual plans for a
+                30-story commercial complex, leading its permitting, and supervising construction
+                on site. Watching drawings become buildings showed me what a contractor needs from
+                a sheet: clear dimensions, consistent notes, and no surprises.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I have a keen eye for color and texture, and I excel at selecting wall and textile 
-                colors and arranging layouts to optimize space and enhance the user experience. My 
-                expertise extends to furniture selection and placement, ensuring that each design 
-                is optimized for comfort, functionality, and style.
+                Today I&apos;m based in Silver Spring, MD. At Capital Engineering I draft traffic
+                control plans in AutoCAD and MicroStation and prepare permit submittals for DC
+                agencies. Through EdenArch, I take on freelance drafting and design work: Revit
+                models, CAD drawings, and renderings for residential, hospitality, and mixed-use
+                projects.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                With a strong focus on sustainability, I am committed to creating environmentally 
-                friendly and socially responsible designs. Let&apos;s work together to bring your 
-                vision to life.
+                I&apos;m open to drafter, CAD technician, and Revit/BIM roles in the Washington,
+                DC area, and to freelance projects that need clear, buildable drawings.
               </p>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4">
+                <a href="/eden-tilahun-resume.pdf" className="link-arrow inline-flex" target="_blank" rel="noopener noreferrer">
+                  View résumé (PDF)
+                </a>
+                <a href="https://www.linkedin.com/in/edenarch" className="link-arrow inline-flex" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -112,11 +140,11 @@ export default function AboutPage() {
       <section className="pb-16 lg:pb-24">
         <div className="container-site">
           <div className="border-t border-border pt-12">
-            <h2 className="text-xl md:text-2xl font-serif mb-12">Experience</h2>
-            
+            <h2 className="text-xl md:text-2xl font-serif mb-12">Experience and education</h2>
+
             <div className="space-y-0">
               {timeline.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-b border-border"
                 >
@@ -126,12 +154,13 @@ export default function AboutPage() {
                       {item.year}
                     </span>
                   </div>
-                  
+
                   {/* Title */}
                   <div className="md:col-span-3">
                     <h3 className="text-lg font-medium">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{item.role}</p>
                   </div>
-                  
+
                   {/* Description */}
                   <div className="md:col-span-7">
                     <p className="text-muted-foreground leading-relaxed">
@@ -155,72 +184,24 @@ export default function AboutPage() {
               </div>
               <div>
                 <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                    Floor plan drawings and 3D modeling
-                  </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                    Photorealistic architectural visualizations
-                  </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                    Interior design and space planning
-                  </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                    Material and color selection
-                  </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                    Construction documentation
-                  </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                    On-site construction supervision
-                  </li>
+                  {skills.map((skill) => (
+                    <li key={skill} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                      {skill}
+                    </li>
+                  ))}
                 </ul>
-                
+
+                <p className="text-sm text-muted-foreground mt-8">
+                  <span className="font-medium text-foreground">Tools:</span> AutoCAD · Revit ·
+                  MicroStation · SketchUp · Adobe Creative Suite
+                </p>
+
                 <Link href="/services" className="link-arrow mt-8 inline-flex">
                   View all services
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section border-t border-border">
-        <div className="container-site">
-          <div className="flex justify-end mb-8">
-            <span className="section-label">(03) — CLIENTS</span>
-          </div>
-          
-          <div className="mb-16">
-            <h2 className="font-serif text-3xl lg:text-4xl text-balance max-w-2xl">
-              I build trust through relationships as lasting as my spaces.
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mt-6 max-w-2xl">
-              My clients range from developers to cultural institutions and private homeowners. 
-              Each partnership is grounded in clear communication, professional rigor, and a shared 
-              belief in design that stands the test of time.
-            </p>
-          </div>
-          
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            {testimonials.map((testimonial, index) => (
-              <blockquote key={index} className="border-t border-border pt-8">
-                <p className="text-lg leading-relaxed mb-6">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <footer>
-                  <cite className="not-italic font-medium">{testimonial.author}</cite>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                </footer>
-              </blockquote>
-            ))}
           </div>
         </div>
       </section>

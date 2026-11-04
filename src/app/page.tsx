@@ -11,38 +11,39 @@ import {
 
 // Stats data
 const stats = [
-  { value: '4', label: 'Completed projects' },
-  { value: '3', label: 'Building types' },
-  { value: '100%', label: 'Client focused' },
-  { value: '2024', label: 'Founded' },
+  { value: '6+', label: 'Years in architecture and construction' },
+  { value: '3', label: 'CAD & BIM platforms' },
+  { value: '5', label: 'Portfolio projects' },
+  { value: '2019', label: 'B.S. in Architecture' },
 ];
 
 // Services data
 const services = [
   {
     number: '01',
-    title: 'Architectural design',
-    description: 'Full design services from concept through construction documentation. I develop clear, coordinated drawings that contractors can build from — minimizing surprises and change orders.',
+    title: 'Drafting and construction documents',
+    description: 'Coordinated drawing sets in AutoCAD and Revit: floor plans, elevations, sections, and site plans that reviewers can approve and contractors can build from.',
   },
   {
     number: '02',
-    title: 'Interior architecture',
-    description: 'Integrated interior design that extends the architectural concept into finishes, fixtures, and furniture layouts. Not decoration; spatial design.',
+    title: 'Permit and civil drafting',
+    description: 'Traffic control plans in AutoCAD and MicroStation, plus permit packages for DC agencies including DDOT, DOB, and DOEE, assembled, submitted, and tracked through review.',
   },
   {
     number: '03',
-    title: 'Urban and landscape design',
-    description: 'Site planning, landscape integration, and urban-scale studies. I consider the building\'s relationship to its context from day one — not as an afterthought.',
+    title: 'Revit modeling and visualization',
+    description: 'Revit models that keep plans, sections, and elevations in sync, with 3D views and renderings that help teams and clients see the design before it is built.',
   },
   {
     number: '04',
-    title: 'Project delivery and consultancy',
-    description: 'Design review, permit coordination, and construction oversight. For clients who have a design but need help getting it built.',
+    title: 'Architectural and interior design',
+    description: 'Concept through design development for residential, hospitality, and mixed-use projects, including space planning and interior layouts.',
   },
 ];
 
 // Projects data (static for client component)
 const projects = [
+  { slug: 'eight-a-apartments', title: 'Eight-A Apartments', category: 'Residential Architecture', year: '2025', thumbnail: '/images/projects/eight-a-apartments/hero.jpg' },
   { slug: 'glass-box-cafe', title: 'Glass Box Cafe', category: 'Hospitality', year: '2024', thumbnail: '/images/projects/glass-box-cafe/hero.jpg' },
   { slug: 'westfield-residence', title: 'Westfield Residence', category: 'Residential Architecture', year: '2024', thumbnail: '/images/projects/westfield-residence/hero.jpg' },
   { slug: 'horizon-tower', title: 'Horizon Tower', category: 'Mixed-Use Architecture', year: '2023', thumbnail: '/images/projects/horizon-tower/hero.jpeg' },
@@ -52,28 +53,24 @@ const projects = [
 // FAQ data
 const faqs = [
   {
-    question: 'What types of projects do you take on?',
-    answer: 'I work across a range of scales and typologies — from private residences and interiors to commercial buildings and mixed-use developments. Each project receives the same level of attention to detail and commitment to quality, regardless of size.',
+    question: 'What kinds of drawings do you produce?',
+    answer: 'Construction documents and permit sets (floor plans, elevations, sections, and site plans) for residential, hospitality, and mixed-use projects, plus traffic control plans for roadway and right-of-way work.',
   },
   {
-    question: 'How early should I involve you in my project?',
-    answer: 'The earlier, the better. Involving an architect from the start helps avoid costly mistakes and ensures the design aligns with your goals, budget, and site conditions from day one. Even if you\'re just exploring possibilities, a conversation can help clarify your options.',
+    question: 'Which software do you use?',
+    answer: 'AutoCAD, Revit, and MicroStation for drafting and modeling, SketchUp for quick 3D studies, and Adobe Creative Suite for presentation boards and renderings.',
   },
   {
-    question: 'Do you only work with large-scale clients?',
-    answer: 'Not at all. I work with individuals, families, and businesses of all sizes. Whether you\'re building your first home or developing a commercial property, I bring the same professional approach to every project.',
+    question: 'Are you a licensed architect?',
+    answer: 'No. I am an architectural drafter and designer with a B.S. in Architecture and Urban Planning. On projects that need sealed drawings, I work with the licensed architect or engineer of record.',
   },
   {
-    question: 'What does your process look like?',
-    answer: 'My process typically moves through four phases: initial consultation and concept development, design development with detailed drawings, construction documentation, and construction administration. I keep clients informed at every stage with clear communication and regular check-ins.',
-  },
-  {
-    question: 'Do you manage construction as well?',
-    answer: 'I offer construction administration services, which means I can oversee the construction process to ensure the built work matches the design intent. While I don\'t act as a general contractor, I work closely with builders to address questions and maintain quality.',
+    question: 'Are you open to full-time roles or freelance work?',
+    answer: 'Both. I am open to drafter, CAD technician, and Revit/BIM roles in the Washington, DC area or remote, and I take on freelance drafting and design projects through EdenArch.',
   },
   {
     question: 'How do I get started?',
-    answer: 'Simply reach out through the contact form or send me an email. I\'ll schedule an initial consultation to discuss your project, understand your goals, and explain how I can help bring your vision to life.',
+    answer: 'Send a message through the contact form or email edenetilahun@gmail.com. Tell me about the role or project, the drawings you need, and your timeline, and I will reply with next steps.',
   },
 ];
 
@@ -87,29 +84,34 @@ export default function HomePage() {
             {/* Left - Headline */}
             <div>
               <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-balance leading-[1.1]">
-                I design spaces that balance function and timeless beauty.
+                Clear, buildable drawings, from first sketch to permit set.
               </h1>
-              <Link href="/contact" className="link-arrow mt-8 inline-flex">
-                Get started
-              </Link>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4">
+                <Link href="/contact" className="link-arrow inline-flex">
+                  Get in touch
+                </Link>
+                <a href="/eden-tilahun-resume.pdf" className="link-arrow inline-flex" target="_blank" rel="noopener noreferrer">
+                  View résumé
+                </a>
+              </div>
             </div>
-            
+
             {/* Right - Description */}
             <div className="max-w-md">
               <p className="text-muted-foreground leading-relaxed">
-                My architecture is guided by precision and restraint. I blend modern 
-                aesthetics with human-centered design, creating spaces that endure. From residential 
-                and commercial projects to cultural landmarks, I focus on designing environments that 
-                integrate seamlessly with their context and stand the test of time.
+                I&apos;m Eden Tilahun, an architectural and civil CAD drafter and architectural
+                designer based in Silver Spring, MD. I turn design intent into coordinated drawing
+                sets in AutoCAD, Revit, and MicroStation, and because I&apos;ve supervised
+                construction on site, I draw with the builder in mind.
               </p>
             </div>
           </div>
-          
+
           {/* Hero Image */}
           <div className="mt-16 lg:mt-24 relative aspect-[16/9] bg-muted overflow-hidden">
             <Image
               src="/images/eden/hero.jpeg"
-              alt="Eden Eskinder - Architect"
+              alt="Eden Tilahun, architectural drafter and designer"
               fill
               className="object-cover"
               priority
@@ -125,33 +127,33 @@ export default function HomePage() {
           <div className="flex justify-end mb-8">
             <span className="section-label">(01) — ABOUT</span>
           </div>
-          
+
           <div className="two-col">
             {/* Left - Headline */}
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                Architecture that stands for clarity and purpose.
+                Drafting grounded in architecture and construction.
               </h2>
             </div>
-            
+
             {/* Right - Description */}
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                EdenArch is my architectural practice focused on delivering thoughtful, buildable design 
-                for clients who value clarity over complexity. I work across scales — from private 
-                residences to mixed-use towers — bringing the same attention to spatial quality, 
-                material honesty, and client outcomes to every project.
+                I bring a B.S. in Architecture and 6+ years at an engineering firm, a general
+                contractor, and my own practice to every drawing set, from a five-bedroom house
+                and an 80-seat cafe to a 15-story mixed-use tower.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Based in Addis Ababa, I collaborate with developers, entrepreneurs, and homeowners 
-                who want architecture that works: on budget, on time, and exactly as imagined.
+                Today I draft traffic control plans and prepare permit submittals for DC agencies
+                at a DC-area engineering firm, and take on freelance drafting and design work
+                through EdenArch, my studio.
               </p>
               <Link href="/about" className="link-arrow">
                 About me
               </Link>
             </div>
           </div>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mt-16 lg:mt-24 pt-12 border-t border-border">
             {stats.map((stat) => (
@@ -170,21 +172,21 @@ export default function HomePage() {
           <div className="flex justify-end mb-8">
             <span className="section-label">(02) — SERVICES</span>
           </div>
-          
+
           <div className="two-col mb-16">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                Discover the full range of services I offer.
+                Drafting first, backed by design.
               </h2>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                From early concept through construction documentation, I ensure that every project 
-                feels cohesive, intentional, and built to last.
+                Clear, coordinated drawings in AutoCAD, Revit, and MicroStation, supported by a
+                degree and hands-on experience in architectural design.
               </p>
             </div>
           </div>
-          
+
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
             {services.map((service) => (
@@ -195,7 +197,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          
+
           <Link href="/services" className="link-arrow mt-12 inline-flex">
             View all services
           </Link>
@@ -208,21 +210,21 @@ export default function HomePage() {
           <div className="flex justify-end mb-8">
             <span className="section-label">(03) — WORK</span>
           </div>
-          
+
           <div className="two-col mb-16">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
-                Architecture built on precision and purpose.
+                Drawings and design built on precision.
               </h2>
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                My portfolio spans hospitality, residential, commercial, and wellness — each 
-                project responding to its own brief, site, and story.
+                Residential, hospitality, mixed-use, and wellness projects, each shown through
+                the floor plans, elevations, and models behind it.
               </p>
             </div>
           </div>
-          
+
           {/* Project List */}
           <div className="border-t border-border">
             {projects.map((project) => (
@@ -235,7 +237,7 @@ export default function HomePage() {
                 <div className="w-16 text-sm text-muted-foreground">
                   {project.year}
                 </div>
-                
+
                 {/* Thumbnail + Title */}
                 <div className="flex items-center gap-4 flex-1">
                   <div className="relative w-12 h-12 bg-muted overflow-hidden shrink-0">
@@ -249,12 +251,12 @@ export default function HomePage() {
                   </div>
                   <span className="font-medium">{project.title}</span>
                 </div>
-                
+
                 {/* Category */}
                 <div className="hidden md:block text-sm text-muted-foreground">
                   {project.category}
                 </div>
-                
+
                 {/* Arrow */}
                 <div className="text-muted-foreground group-hover:translate-x-1 transition-transform">
                   →
@@ -265,60 +267,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section border-t border-border">
-        <div className="container-site">
-          <div className="flex justify-end mb-8">
-            <span className="section-label">(04) — CLIENTS</span>
-          </div>
-          
-          <div className="mb-16">
-            <h2 className="font-serif text-3xl lg:text-4xl text-balance max-w-2xl">
-              I build trust through relationships as lasting as my spaces.
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mt-6 max-w-2xl">
-              My clients range from developers to entrepreneurs and private homeowners. Each 
-              partnership is grounded in clear communication, professional rigor, and a shared 
-              belief in design that stands the test of time.
-            </p>
-          </div>
-          
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            <blockquote className="border-t border-border pt-8">
-              <p className="text-lg leading-relaxed mb-6">
-                &ldquo;Eden guided our project with remarkable clarity and vision. He 
-                understood not only the architecture but also the business goals behind it, making 
-                him an invaluable partner.&rdquo;
-              </p>
-              <footer>
-                <cite className="not-italic font-medium">Sarah Mitchell</cite>
-                <div className="text-sm text-muted-foreground">Director, Horizon Development Group</div>
-              </footer>
-            </blockquote>
-            
-            <blockquote className="border-t border-border pt-8">
-              <p className="text-lg leading-relaxed mb-6">
-                &ldquo;Working with Eden was seamless from start to finish. His approach is 
-                refined, precise, and deeply thoughtful — our institution now has a space that truly 
-                embodies its mission.&rdquo;
-              </p>
-              <footer>
-                <cite className="not-italic font-medium">David Romero</cite>
-                <div className="text-sm text-muted-foreground">Founder, Romero & Associates Cultural Projects</div>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="section border-t border-border">
         <div className="container-site">
           <div className="flex justify-end mb-8">
-            <span className="section-label">(05) — FAQ</span>
+            <span className="section-label">(04) — FAQ</span>
           </div>
-          
+
           <div className="two-col mb-16">
             <div>
               <h2 className="font-serif text-3xl lg:text-4xl text-balance">
@@ -327,12 +282,11 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed">
-                Starting an architecture project is a big decision. Here are answers to the most 
-                common questions.
+                Quick answers for hiring teams and clients.
               </p>
             </div>
           </div>
-          
+
           {/* FAQ Accordion */}
           <Accordion type="single" collapsible className="border-t border-border">
             {faqs.map((faq, index) => (

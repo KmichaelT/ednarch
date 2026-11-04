@@ -18,12 +18,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'EdenArch | Architecture that works',
-  description: 'Design services for clients who value clarity, precision, and buildings that deliver on their promise.',
-  keywords: ['architecture', 'design', 'residential', 'commercial', 'Ethiopia', 'Addis Ababa'],
+  title: 'EdenArch | Eden Tilahun, Architectural Drafter & Designer',
+  description: 'Eden Tilahun is an architectural and civil CAD drafter and architectural designer in Silver Spring, MD, producing construction documents, permit drawings, and Revit models in AutoCAD, Revit, and MicroStation.',
+  keywords: ['architectural drafter', 'CAD drafter', 'civil drafter', 'Revit', 'AutoCAD', 'MicroStation', 'construction documents', 'permit drawings', 'architectural designer', 'Silver Spring', 'Maryland', 'Washington DC'],
   openGraph: {
-    title: 'EdenArch | Architecture that works',
-    description: 'Design services for clients who value clarity, precision, and buildings that deliver on their promise.',
+    title: 'EdenArch | Eden Tilahun, Architectural Drafter & Designer',
+    description: 'Construction documents, permit drawings, and Revit models in AutoCAD, Revit, and MicroStation.',
     type: 'website',
   },
   icons: {
