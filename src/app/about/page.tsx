@@ -10,38 +10,20 @@ const timeline = [
   {
     year: '2025 – Present',
     title: 'Capital Engineering LLC',
-    role: 'Permit Coordinator',
+    role: 'Drafter & Permit Coordinator',
     description: 'Draft traffic control plans in AutoCAD and MicroStation, and prepare and track permit submittals for DC agencies, including DDOT, DOB, and DOEE.',
   },
   {
-    year: '2023 – Present',
-    title: 'EdenArch',
-    role: 'Freelance Architectural Drafter & Designer',
-    description: 'Revit models, CAD drawings, and renderings for residential, hospitality, and mixed-use projects, including an 8-unit, 5-story apartment building delivered in three weeks.',
-  },
-  {
-    year: '2020 – 2023',
+    year: '2020 – 2024',
     title: 'S.Hawi General Contractor',
     role: 'Architectural Designer & Urban Planner',
     description: 'Developed AutoCAD conceptual plans for a 30-story commercial complex, led its permitting and zoning compliance, and supervised construction on site. Received the company\'s Certificate of Recognition in 2021.',
-  },
-  {
-    year: '2019 – 2020',
-    title: 'Denk Furniture Co.',
-    role: 'Architectural Designer',
-    description: 'Worked with manufacturing teams to keep product designs within safety and regulatory standards.',
   },
   {
     year: '2019',
     title: 'Unity University',
     role: 'B.S. in Architecture and Urban Planning',
     description: 'Coursework in architectural design, urban planning, and building systems.',
-  },
-  {
-    year: '2018',
-    title: 'Nemad Consulting Architects & Engineers',
-    role: 'Architecture Intern',
-    description: 'Prepared bills of quantities and reinforced concrete schedules, and supported as-built drawings for a rehabilitation center\'s permit documents.',
   },
 ];
 
@@ -106,8 +88,8 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I studied architecture and urban planning at Unity University, then spent more
-                than three years at S.Hawi General Contractor drawing conceptual plans for a
+                I studied architecture and urban planning at Unity University, then spent nearly
+                four years at S.Hawi General Contractor drawing conceptual plans for a
                 30-story commercial complex, leading its permitting, and supervising construction
                 on site. Watching drawings become buildings showed me what a contractor needs from
                 a sheet: clear dimensions, consistent notes, and no surprises.
@@ -115,9 +97,7 @@ export default function AboutPage() {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Today I&apos;m based in Silver Spring, MD. At Capital Engineering I draft traffic
                 control plans in AutoCAD and MicroStation and prepare permit submittals for DC
-                agencies. Through EdenArch, I take on freelance drafting and design work: Revit
-                models, CAD drawings, and renderings for residential, hospitality, and mixed-use
-                projects.
+                agencies, including DDOT, DOB, and DOEE.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 I&apos;m open to drafter, CAD technician, and Revit/BIM roles in the Washington,

@@ -4,7 +4,7 @@ import { getAllProjects } from '@/lib/mdx';
 
 export const metadata = {
   title: 'Work | EdenArch',
-  description: 'Residential, hospitality, mixed-use, and wellness projects, shown through the floor plans, elevations, and models behind them.',
+  description: 'Drawing sets for a 15-story mixed-use tower, a three-story house, and a two-level cafe.',
 };
 
 export default function WorkPage() {
@@ -18,8 +18,9 @@ export default function WorkPage() {
           <div>
             <h1 className="font-serif text-4xl lg:text-5xl">Work</h1>
             <p className="text-muted-foreground leading-relaxed mt-6 max-w-md">
-              Residential, hospitality, mixed-use, and wellness projects, each shown through the
-              floor plans, elevations, sections, and models I drew for it.
+              Drawing sets for a 15-story mixed-use tower, a three-story house, and a two-level
+              cafe: floor plans, sections, elevations, and site plans, with renderings where they
+              help.
             </p>
           </div>
           <div className="flex justify-end items-start">
